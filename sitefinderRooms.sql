@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `building` (
   PRIMARY KEY (`BuildingID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table sitefinderrooms.building: ~2 rows (approximately)
+-- Dumping data for table sitefinderrooms.building: ~3 rows (approximately)
 DELETE FROM `building`;
 /*!40000 ALTER TABLE `building` DISABLE KEYS */;
 INSERT INTO `building` (`BuildingID`, `BuildingName`, `BuildingFaculty`, `BuildingCampus`) VALUES
@@ -113,15 +113,15 @@ INSERT INTO `room` (`RoomID`, `BuildingID`, `RoomName`, `RoomFaculty`, `RoomDoor
 	(4, 2, 'tcb21', 'FST', 'tcb21d', 'tcb21', 'STA', '10.64064', '-61.40022', NULL),
 	(5, 2, 'tcb22', 'FST', 'tcb22d', 'tcb22', 'STA', '10.64056', '-61.40020', NULL),
 	(6, 2, 'tcb23', 'FST', 'tcb23d', 'tcb23', 'STA', '10.64050', '-61.40017', NULL),
-	(7, 3, 'tcb31', 'FST', 'tcb31d', 'tcb31', 'STA', '10.64098', '-64.40111', NULL),
-	(8, 3, 'tcb32', 'FST', 'tcb32d', 'tcb32', 'STA', '10.64093', '-64.40119', NULL),
-	(9, 3, 'tcb33', 'FST', 'tcb33d', 'tcb33', 'STA', '10.64120', '-64.40100', NULL),
-	(10, 1, 'ls1', 'FST', 'ls1', 'ls1', 'STA', '10.64159', '-64.40077', NULL),
-	(11, 1, 'ls2', 'FST', 'ls2', 'ls2', 'STA', '10.64158', '-64.40056', NULL),
-	(12, 1, 'lifesciences', 'FST', 'lifesciencesd', 'lifesciences', 'STA', '10.64010', '-64.40033', NULL),
-	(13, 1, 'naturalsciences', 'FST', 'naturalsciencesd', 'naturalsciences', 'STA', '10.64010', '-64.40033', NULL),
-	(14, NULL, 'fstdean', 'FST', 'fstdeand', 'fstdean', 'STA', '10.64182', '-64.40160', NULL),
-	(15, 1, 'fstundercroft', 'FST', 'fstundercroftd', 'fstundercroft', 'STA', '10.64075', '-64.40025', NULL);
+	(7, 3, 'tcb31', 'FST', 'tcb31d', 'tcb31', 'STA', '10.64098', '-61.40111', NULL),
+	(8, 3, 'tcb32', 'FST', 'tcb32d', 'tcb32', 'STA', '10.64093', '-61.40119', NULL),
+	(9, 3, 'tcb33', 'FST', 'tcb33d', 'tcb33', 'STA', '10.64120', '-61.40100', NULL),
+	(10, 1, 'ls1', 'FST', 'ls1', 'ls1', 'STA', '10.64159', '-61.40077', NULL),
+	(11, 1, 'ls2', 'FST', 'ls2', 'ls2', 'STA', '10.64158', '-61.40056', NULL),
+	(12, 1, 'lifesciences', 'FST', 'lifesciencesd', 'lifesciences', 'STA', '10.64010', '-61.40033', NULL),
+	(13, 1, 'naturalsciences', 'FST', 'naturalsciencesd', 'naturalsciences', 'STA', '10.64010', '-61.40033', NULL),
+	(14, NULL, 'fstdean', 'FST', 'fstdeand', 'fstdean', 'STA', '10.64182', '-61.40160', NULL),
+	(15, 1, 'fstundercroft', 'FST', 'fstundercroftd', 'fstundercroft', 'STA', '10.64075', '-61.40025', NULL);
 /*!40000 ALTER TABLE `room` ENABLE KEYS */;
 
 -- Dumping structure for table sitefinderrooms.roomfeatures
@@ -136,7 +136,7 @@ CREATE TABLE IF NOT EXISTS `roomfeatures` (
   CONSTRAINT `FK_RoomFeatures_room` FOREIGN KEY (`RoomID`) REFERENCES `room` (`RoomID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table sitefinderrooms.roomfeatures: ~0 rows (approximately)
+-- Dumping data for table sitefinderrooms.roomfeatures: ~14 rows (approximately)
 DELETE FROM `roomfeatures`;
 /*!40000 ALTER TABLE `roomfeatures` DISABLE KEYS */;
 INSERT INTO `roomfeatures` (`RoomID`, `RoomType`, `RoomSeats`, `RoomProjector`, `NewFeature1`, `MiscellaneousFeatures`) VALUES
