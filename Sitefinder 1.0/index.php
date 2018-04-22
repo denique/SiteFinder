@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "user1";
-$password = "";
+$password = "resu";
 $dbname = "sitefinderRooms";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password);
